@@ -1,3 +1,2 @@
-# PracticeCoding
-
-# Python
+# Algorithm 연습장
+##### Python
