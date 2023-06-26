@@ -28,3 +28,47 @@ def solution(clothes):
 
 
 # 30갸지의 다른 옷이 한개씩 있는 경우 시간초과됨
+
+if __name__ == "__main__":
+    clothes = [
+        ["yellow_hat", "headgear"],
+        ["blue_sunglasses", "eyewear"],
+        ["green_turban", "headgear"],
+    ]
+    correct_answer = 5
+    assert solution(clothes) == correct_answer
+
+    clothes = [
+        ["1"],
+        ["2"],
+        ["3"],
+        ["4"],
+        ["5"],
+        ["6"],
+        ["7"],
+        ["8"],
+        ["9"],
+        ["10"],
+        ["11"],
+        ["12"],
+        ["13"],
+        ["14"],
+        ["15"],
+        ["16"],
+        ["17"],
+        ["18"],
+        ["19"],
+        ["20"],
+        ["21"],
+        ["22"],
+        ["23"],
+        ["24"],
+        ["25"],
+        ["26"],
+        ["27"],
+        ["28"],
+        ["29"],
+        ["30"],
+    ]
+    correct_answer = 1073741823
+    # assert solution(clothes) == correct_answer
