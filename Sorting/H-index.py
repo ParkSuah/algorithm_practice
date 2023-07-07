@@ -18,23 +18,20 @@ def solution(citations):
     return answer
 
 
-def solution(citations):
+def solution(citations):  # 정답
     answer = 0
     citations.sort()
     n = len(citations)  # 논문 개수
     h = 0
     h_count = 0
     while h <= h_count:
-        h += 1
+        h += 1  # 논문은 1편 이상
         for i, c in enumerate(citations):
             if c >= h:
-                h_count = n - i  # len(citations[i:])
-                print(h, citations[i:])
+                h_count = len(citations[i:])
                 break
 
     answer = h - 1
-
-    print(answer)
 
     return answer
 
