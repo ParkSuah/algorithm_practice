@@ -5,27 +5,27 @@ def solution(people, limit):
     while True:
         if not people:
             break
-        cnt_person = 0
-        sum_weight = 0
-        idx = 0
-        # if sum_weight < limit:
-        for idx, p in enumerate(people):
-            sum_weight += p
-            if sum_weight <= limit:
-                cnt_boat += 1
-                cnt_person += 1
-                print(cnt_boat, people[idx])
-                people.pop(idx)
-                if cnt_person == 2:
-                    cnt_person = 0
-                    idx = 0
+        person = people[0]
+        print(people)
+        print(f"now: {person}")
+        people.pop(0)
+        if limit == person:
+            print(person, cnt_boat)
+            cnt_boat += 1
+            print(f"case1: {person}, {cnt_boat}")
+            continue
+        else:
+            two_flag = False
+            for m in people:
+                if person + m <= limit:
+                    cnt_boat += 1
+                    people.remove(m)
+                    print(f"case2: {person}, {m}, {cnt_boat}")
+                    two_flag = True
                     break
-            else:
+            if not two_flag:
                 cnt_boat += 1
-                print(cnt_boat, people[idx])
-                people.pop(idx)
-                idx = 0
-                break
+                print(f"case3: {person}, {cnt_boat}")
 
     answer = cnt_boat
     print(cnt_boat)
